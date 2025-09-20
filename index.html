@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Demo</title>
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Dark mode toggle support
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+  
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full bg-white dark:bg-gray-800 shadow-md z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">MyPortfolio</h1>
+      <div class="space-x-6 hidden md:flex">
+        <a href="#about" class="hover:text-blue-500">About</a>
+        <a href="#projects" class="hover:text-blue-500">Projects</a>
+        <a href="#contact" class="hover:text-blue-500">Contact</a>
+      </div>
+      <button id="themeToggle" class="ml-4 px-3 py-1 border rounded-md text-sm">
+        🌙
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="h-screen flex flex-col justify-center items-center text-center px-6">
+    <h2 class="text-4xl md:text-6xl font-extrabold mb-4">Hi, I'm <span class="text-blue-500">Alex</span></h2>
+    <p class="text-lg md:text-xl max-w-xl mb-6">A passionate web developer crafting modern websites and apps.</p>
+    <a href="#projects" class="px-6 py-3 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600">View My Work</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-gray-100 dark:bg-gray-800 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-6">About Me</h3>
+      <p class="text-lg leading-relaxed">I’m a full-stack developer who loves building interactive and modern applications. With expertise in JavaScript, React, Node.js, and TailwindCSS, I strive to deliver engaging user experiences and clean, maintainable code.</p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-3xl font-bold text-center mb-10">Projects</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg overflow-hidden transition">
+          <img src="https://via.placeholder.com/400x200" alt="Project" class="w-full">
+          <div class="p-6">
+            <h4 class="text-xl font-semibold mb-2">Project One</h4>
+            <p class="text-sm mb-4">A modern responsive website built with TailwindCSS and JavaScript.</p>
+            <a href="#" class="text-blue-500 hover:underline">View Details →</a>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg overflow-hidden transition">
+          <img src="https://via.placeholder.com/400x200" alt="Project" class="w-full">
+          <div class="p-6">
+            <h4 class="text-xl font-semibold mb-2">Project Two</h4>
+            <p class="text-sm mb-4">An interactive dashboard application with charts and analytics.</p>
+            <a href="#" class="text-blue-500 hover:underline">View Details →</a>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg overflow-hidden transition">
+          <img src="https://via.placeholder.com/400x200" alt="Project" class="w-full">
+          <div class="p-6">
+            <h4 class="text-xl font-semibold mb-2">Project Three</h4>
+            <p class="text-sm mb-4">A mobile-friendly app prototype built with modern UI principles.</p>
+            <a href="#" class="text-blue-500 hover:underline">View Details →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gray-100 dark:bg-gray-800 px-6">
+    <div class="max-w-3xl mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-6">Get In Touch</h3>
+      <p class="mb-8">Feel free to reach out if you'd like to collaborate or just say hi!</p>
+      <form class="space-y-4">
+        <input type="text" placeholder="Your Name" class="w-full p-3 rounded-lg border dark:border-gray-600 bg-white dark:bg-gray-700">
+        <input type="email" placeholder="Your Email" class="w-full p-3 rounded-lg border dark:border-gray-600 bg-white dark:bg-gray-700">
+        <textarea placeholder="Your Message" rows="5" class="w-full p-3 rounded-lg border dark:border-gray-600 bg-white dark:bg-gray-700"></textarea>
+        <button type="submit" class="px-6 py-3 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 text-center bg-white dark:bg-gray-800 border-t dark:border-gray-700">
+    <p class="text-sm">&copy; 2025 MyPortfolio. All rights reserved.</p>
+  </footer>
+
+  <!-- JS for Dark Mode -->
+  <script>
+    const themeToggle = document.getElementById("themeToggle");
+    const html = document.documentElement;
+    themeToggle.addEventListener("click", () => {
+      html.classList.toggle("dark");
+    });
+  </script>
+</body>
+</html>
